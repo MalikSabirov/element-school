@@ -4,4 +4,4 @@
 
 ### Домашнее задание:
 
-1. [За первую неделю](./homework/1/index.html)
+1. [За первую неделю](https://maliksabirov.github.io/element-school/homework/1/)
