@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--wrapper-bg);
+  font-family: Verdana, sans-serif;
+}
+
+form {
+  background-color: var(--form-bg);
+  padding: 24px 16px;
+  border-radius: 16px;
+  box-shadow: 2px 1px 21px -9px rgba(0, 0, 0, 0.38);
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-weight: 600;
+}
+
+form > fieldset > *:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.form-container {
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+}
+
+.form-container fieldset {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.form-container legend {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+}
+
+.input-container label {
+  margin-right: 12px;
+  min-width: 160px;
+  text-align: right;
+  padding-top: 12px;
+}
+
+.input-container input,
+.input-container select {
+  padding: 8px 12px;
+  width: 100%;
+}
+
+#contacts-data > :nth-child(2) {
+  margin-bottom: 16px;
+}
+
+.gender-input {
+  display: flex;
+  outline: 1px solid red;
+  flex-direction: row;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Страница регистрации</title>
+    <link rel="stylesheet" href="./style/_variables.css" />
+    <link rel="stylesheet" href="./style/general.css" />
+
+    <style>
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Заполните форму для регистрации</h1>
+
+    <main class="container">
+      <form>
+        <fieldset class="form-container">
+          <legend>Общая информация</legend>
+
+          <div class="input-container">
+            <label for="name">Имя</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Введите имя"
+              required
+            />
+          </div>
+
+          <div class="input-container">
+            <label for="age">Возраст</label>
+            <input type="number" id="age" placeholder="Введите свой возраст" />
+          </div>
+
+          <fieldset id="contacts-data">
+            <legend>Контактные данные</legend>
+
+            <div class="input-container">
+              <label for="email">Почта</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Введите почту"
+                required
+              />
+            </div>
+
+            <div class="input-container">
+              <label for="tel">Телефон</label>
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder="Введите номер телефона"
+              />
+            </div>
+          </fieldset>
+
+          <div class="input-container">
+            <label for="password">Пароль</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Придумайте пароль"
+              required
+            />
+          </div>
+
+          <div class="input-container">
+            <label for="confirm-password">Подтвердите пароль</label>
+            <input
+              type="password"
+              id="confirm-password"
+              placeholder="Введите пароль еще раз"
+              required
+            />
+          </div>
+
+          <fieldset>
+            <legend>Дополнительная информация</legend>
+
+            <fieldset class="gender-input">
+              <legend>Пол</legend>
+
+              <div>
+                <label for="male">М</label>
+                <input type="radio" name="gender" id="male" value="male" />
+
+                <label for="female">Ж</label>
+                <input type="radio" name="gender" id="female" value="female" />
+              </div>
+            </fieldset>
+
+            <div class="input-container">
+              <label for="birthday">Дата рождения</label>
+              <input type="date" id="birthday" />
+            </div>
+
+            <div class="input-container">
+              <label>Образование</label>
+
+              <select name="education" id="education">
+                <option value="" selected>Выберите образование</option>
+                <option value="school">Общее-среднее</option>
+                <option value="college">Общее-специализированное</option>
+                <option value="bachelor">Высшее-неоконченное</option>
+                <option value="master">Высшее-оконченное</option>
+              </select>
+            </div>
+
+            <div>
+              <p>Какой язык из предложенного списка знаете?</p>
+
+              <input type="checkbox" id="kz" />
+              <label for="kz">Казахский</label>
+
+              <input type="checkbox" id="ru" />
+              <label for="ru">Русский</label>
+
+              <input type="checkbox" id="en" />
+              <label for="en">Англиский</label>
+            </div>
+
+            <div class="input-container">
+              <label for="aboutYourself">О себе</label>
+              <textarea
+                name="aboutYourself"
+                id="aboutYourself"
+                cols="30"
+                rows="5"
+              >
+              </textarea>
+            </div>
+
+            <button type="submit">
+              <a target="_blank" href="./login.html">Зарегистрироваться</a>
+            </button>
+          </fieldset>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
