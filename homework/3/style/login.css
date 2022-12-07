@@ -1,0 +1,43 @@
+h3 {
+  text-align: center;
+}
+
+.login-inputs > *:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.login-input__container {
+  display: flex;
+  align-items: center;
+}
+
+.login-input__container label {
+  min-width: 100px;
+  text-align: right;
+  margin-right: 12px;
+  position: relative;
+  padding-right: 28px;
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  background-size: contain;
+  transform: translateY(-2px);
+}
+
+.email-label::after {
+  background-image: url(../assets/mail.svg);
+}
+
+.password-label::after {
+  background-image: url(../assets/password.svg);
+}
+
+.login-input__container input {
+  padding: 8px 12px;
+  width: 100%;
+}

@@ -41,7 +41,12 @@
 
           <div class="input-container">
             <label for="age">Возраст</label>
-            <input type="number" id="age" placeholder="Введите свой возраст" />
+            <input
+              name="age"
+              type="number"
+              id="age"
+              placeholder="Введите свой возраст"
+            />
           </div>
 
           <fieldset id="contacts-data">
@@ -75,6 +80,7 @@
               type="password"
               id="password"
               placeholder="Придумайте пароль"
+              name="password"
               required
             />
           </div>
@@ -92,63 +98,87 @@
           <fieldset>
             <legend>Дополнительная информация</legend>
 
-            <fieldset class="gender-input">
-              <legend>Пол</legend>
+            <div class="additional-info">
+              <div style="display: flex; align-items: center">
+                <h4
+                  style="
+                    margin: 0 12px 0 0;
+                    min-width: 160px;
+                    text-align: right;
+                    font-weight: 500;
+                  "
+                >
+                  Пол
+                </h4>
 
-              <div>
-                <label for="male">М</label>
-                <input type="radio" name="gender" id="male" value="male" />
+                <div>
+                  <label for="male">М</label>
+                  <input type="radio" name="gender" id="male" value="male" />
 
-                <label for="female">Ж</label>
-                <input type="radio" name="gender" id="female" value="female" />
+                  <label for="female">Ж</label>
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="female"
+                    value="female"
+                  />
+                </div>
               </div>
-            </fieldset>
 
-            <div class="input-container">
-              <label for="birthday">Дата рождения</label>
-              <input type="date" id="birthday" />
+              <div class="input-container">
+                <label for="birthday">Дата рождения</label>
+                <input type="date" id="birthday" />
+              </div>
+
+              <div class="input-container">
+                <label>Образование</label>
+
+                <select name="education" id="education">
+                  <option value="" selected>Выберите образование</option>
+                  <option value="school">Общее-среднее</option>
+                  <option value="college">Общее-специализированное</option>
+                  <option value="bachelor">Высшее-неоконченное</option>
+                  <option value="master">Высшее-оконченное</option>
+                </select>
+              </div>
+
+              <div class="languages">
+                <h4>Язык</h4>
+
+                <div class="languages__checkboxes">
+                  <div>
+                    <input type="checkbox" id="kz" value="kz" name="langKz" />
+                    <label for="kz">Казахский</label>
+                  </div>
+
+                  <div>
+                    <input type="checkbox" id="ru" value="ru" name="langRu" />
+                    <label for="ru">Русский</label>
+                  </div>
+
+                  <div>
+                    <input type="checkbox" id="en" value="en" name="langEn" />
+                    <label for="en">Англиский</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="textarea-container">
+                <label for="aboutYourself">О себе</label>
+                <textarea
+                  name="aboutYourself"
+                  id="aboutYourself"
+                  cols="30"
+                  rows="5"
+                >
+                </textarea>
+              </div>
             </div>
-
-            <div class="input-container">
-              <label>Образование</label>
-
-              <select name="education" id="education">
-                <option value="" selected>Выберите образование</option>
-                <option value="school">Общее-среднее</option>
-                <option value="college">Общее-специализированное</option>
-                <option value="bachelor">Высшее-неоконченное</option>
-                <option value="master">Высшее-оконченное</option>
-              </select>
-            </div>
-
-            <div>
-              <p>Какой язык из предложенного списка знаете?</p>
-
-              <input type="checkbox" id="kz" />
-              <label for="kz">Казахский</label>
-
-              <input type="checkbox" id="ru" />
-              <label for="ru">Русский</label>
-
-              <input type="checkbox" id="en" />
-              <label for="en">Англиский</label>
-            </div>
-
-            <div class="input-container">
-              <label for="aboutYourself">О себе</label>
-              <textarea
-                name="aboutYourself"
-                id="aboutYourself"
-                cols="30"
-                rows="5"
-              >
-              </textarea>
-            </div>
-
-            <button type="submit">
-              <a target="_blank" href="./login.html">Зарегистрироваться</a>
-            </button>
           </fieldset>
+
+          <button class="btn" type="submit">
+            <a href="./login.html">Зарегистрироваться</a>
+          </button>
         </fieldset>
       </form>
     </main>

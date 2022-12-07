@@ -55,9 +55,13 @@ form > fieldset > *:not(:last-child) {
   padding-top: 12px;
 }
 
-.input-container input,
-.input-container select {
+.input-container input {
   padding: 8px 12px;
+  width: 100%;
+}
+
+.input-container select {
+  padding: 10px 12px;
   width: 100%;
 }
 
@@ -65,8 +69,57 @@ form > fieldset > *:not(:last-child) {
   margin-bottom: 16px;
 }
 
-.gender-input {
+.additional-info > * + * {
+  margin-top: 16px;
+}
+
+.languages {
   display: flex;
-  outline: 1px solid red;
-  flex-direction: row;
+}
+
+.languages h4 {
+  margin: 0 12px 0 0;
+  min-width: 160px;
+  text-align: right;
+  font-weight: normal;
+}
+
+.languages input {
+  margin-left: 0;
+}
+
+.languages__checkboxes > *:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.textarea-container {
+  display: flex;
+}
+
+.textarea-container label {
+  min-width: 160px;
+  margin-right: 12px;
+  text-align: right;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: #4285f4;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  max-width: fit-content;
+  display: block;
+  margin: 20px auto 12px auto;
+}
+
+.btn:hover {
+  box-shadow: 0 0 10px black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
