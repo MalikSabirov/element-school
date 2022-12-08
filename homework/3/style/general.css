@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-color: var(--wrapper-bg);
+  background-color: #edeef0;
   font-family: Verdana, sans-serif;
   margin: 0;
 }
@@ -17,7 +17,7 @@ ul {
 }
 
 form {
-  background-color: var(--form-bg);
+  background-color: #ffffff;
   padding: 24px 16px;
   border-radius: 16px;
   box-shadow: 2px 1px 21px -9px rgba(0, 0, 0, 0.38);
