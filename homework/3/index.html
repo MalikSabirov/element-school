@@ -8,13 +8,12 @@
 
     <link rel="stylesheet" href="./style/_variables.css" />
     <link rel="stylesheet" href="./style/general.css" />
+    <link rel="stylesheet" href="./style/index.css" />
   </head>
   <body>
-    <h1>Ты проделал большой путь, чтобы попасть сюда</h1>
-
     <header>
       <nav>
-        <ul>
+        <ul class="nav-list">
           <li>
             <a href="#">Главная</a>
           </li>
@@ -30,12 +29,12 @@
       </nav>
     </header>
 
-    <main>
-      <section>
-        <h2>Мои первые мысли о языках программирования</h2>
-      </section>
+    <h1>Ты проделал большой путь, чтобы попасть сюда</h1>
 
-      <table id="table">
+    <main>
+      <h2>Мои первые мысли о языках программирования</h2>
+
+      <table id="table" class="table">
         <tr>
           <th>№</th>
           <th>Название</th>
@@ -191,12 +190,12 @@
       <h2>
         Что нужно знать (Hard skills), чтобы быть +- Frontend Developer-ом
       </h2>
-      <ul>
+      <ol>
         <li>HTML</li>
         <li>CSS (SCSS)</li>
         <li>JS</li>
         <li>GIT</li>
-        <li>Один из хайповых фреймворков React/Vue/Angular</li>
+        <li>Один из хайповых фреймворков React/Vue/Angolar</li>
         <li>
           State manager (Redux/MobX/VueX(неуверен что именно так называется,
           короче стейт менеджер для вью/Ангулярский/Effector))
@@ -211,9 +210,22 @@
           существующий проект, это по мне не обязательно
         </li>
         <li>и еще 100500+ неадекватных требований от HR</li>
-      </ul>
+      </ol>
     </main>
 
-    <footer>Алматы - 2022г</footer>
+    <a
+      style="
+        font-size: 40px;
+        color: cornflowerblue;
+        display: block;
+        max-width: fit-content;
+        margin: 50px auto;
+      "
+      href="./page4.html"
+    >
+      ВТОРАЯ ЧАСТЬ ЗАДАНИЯ
+    </a>
+
+    <footer>Алматы - 2022 г</footer>
   </body>
 </html>
