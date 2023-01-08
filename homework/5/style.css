@@ -1,0 +1,117 @@
+h1 {
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24px;
+  background: #303030;
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+.display {
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.button {
+  background-color: #505050;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  transition: 0.2s background-color linear;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #404040;
+}
+
+.display {
+  position: relative;
+  font-weight: bold;
+  text-align: right;
+}
+
+.display-indicate {
+  display: none;
+  position: absolute;
+  outline: 1px solid red;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  top: 0;
+  padding-top: 4px;
+  padding-left: 8px;
+  color: red;
+}
+
+.max {
+  display: block;
+}
+
+.display-operations {
+  padding-top: 16px;
+  margin-bottom: 8px;
+  font-size: 24px;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.display-operations::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  left: 4px;
+  bottom: 0;
+}
+
+.display-main {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.ac,
+.ce {
+  background-color: #ff5050;
+}
+
+.equal {
+  grid-row: span 2;
+  background-color: #00af00;
+}
+
+.equal:hover {
+  background-color: green;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.ac:hover,
+.ce:hover {
+  background-color: red;
+}
