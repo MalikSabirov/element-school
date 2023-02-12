@@ -5,15 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home work #6</title>
-  </head>
-  <body>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      video {
+        display: none;
+      }
+
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <video id="vid" width="640" height="480"></video>
+
+    <canvas id="out" width="640" height="480"></canvas>
 
     <script>
-      const loadAndPredict = async () => {
-        this.net = await bodyPix.load();
-      };
+      async function loop(canvas, video, net, blur = 3) {
+        const segmentation = await net.segmentPerson(video);
+
+        bodyPix.bodydrawBokehEffect(canvas, video, segmentation, blur);
+
+        requestAnimationFrame(() => {
+          bodyPix.loop(canvas, video, net, blur);
+        });
+      }
+
+      async function main() {
+        let video = document.getElementById("vid");
+        let canvas = document.getElementById("out");
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: true,
+        });
+
+        video.srcObject = stream;
+
+        video.play();
+
+        // video.addEventListener("loadeddata", async () => {
+        //   const net = await bodyPix.load({
+        //     architecture: "MobileNetV1",
+        //     outputStride: 16,
+        //     multiplier: 0.5,
+        //     quantBytes: 1,
+        //   });
+
+        //   loop(canvas, video, net, 8);
+        // });
+      }
+
+      main();
     </script>
   </body>
 </html>
