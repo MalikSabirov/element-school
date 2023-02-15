@@ -40,3 +40,12 @@ button {
   padding-top: 8px;
   padding-bottom: 8px;
 }
+
+.link {
+  margin-top: 100px;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
