@@ -64,17 +64,20 @@
 const form = document.getElementById("form");
 
 const getUploads = () => {
-  return form.addEventListener(
-    "submit",
-    (ev) => {
-      ev.preventDefault();
+  return new Promise((resolve) => {
+    form.addEventListener(
+      "submit",
+      (ev) => {
+        ev.preventDefault();
 
-      getBase64(ev.target.file.files[0]);
+        const base64 = getBase64(ev.target.file.files[0]);
+        resolve(base64);
 
-      ev.target.file.files.length = 0;
-    },
-    { once: true }
-  );
+        ev.target.file.files.length = 0;
+      },
+      { once: true }
+    );
+  });
 };
 
 const getBase64 = (file) => {
