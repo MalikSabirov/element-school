@@ -1,8 +1,10 @@
 const URL_POSTS = "https://jsonplaceholder.typicode.com/posts";
 const URL_COMMENTS = "https://jsonplaceholder.typicode.com/comments";
+const loader = document.getElementById("loader");
 
 let posts;
 let comments;
+const postsList = document.getElementById("posts");
 
 const getData = (url) => {
   return fetch(url)
@@ -26,7 +28,6 @@ Promise.allSettled([getData(URL_POSTS), getData(URL_COMMENTS)])
           posts = toHashMap(result.value);
         } else {
           comments = result.value;
-          console.log(comments);
         }
       }
     });
@@ -43,6 +44,44 @@ Promise.allSettled([getData(URL_POSTS), getData(URL_COMMENTS)])
     });
   })
   .then(() => {
-    console.log(posts);
+    let output = "";
+
+    Object.values(posts).map((post) => {
+      output += `
+        <li class="post">
+          <h3 class="post__title">${post.title}</h3>
+          <p class="post__body">${post.body}</p>
+
+          ${
+            post.children
+              ? `
+          <details >
+            <summary>Comments</summary>
+          
+            <ul class="post__comments">
+            ${post.children
+              .map(
+                (comment) =>
+                  `<li class="comment">
+                <h4 class="comment__title">${comment.name}</h4>
+                <p class="comment__body">${comment.body}</p>
+                <p class="comment__email">${comment.email}</p>
+              </li>`
+              )
+              .join("")}
+            </ul>
+          </details>`
+              : ""
+          }
+        </li>
+      `;
+    });
+
+    postsList.innerHTML = output;
   })
-  .catch(console.error);
+  .catch(console.error)
+  .finally(() => {
+    if (!loader.classList.contains("hidden")) {
+      loader.classList.add("hidden");
+    }
+  });
