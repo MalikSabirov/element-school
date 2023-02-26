@@ -9,3 +9,4 @@
 3. [Домашнее задание №3](https://maliksabirov.github.io/element-school/homework/3/register.html)
 4. [Домашнее задание №5](https://maliksabirov.github.io/element-school/homework/5/)
 5. [Домашнее задание №6](https://maliksabirov.github.io/element-school/homework/6/)
+6. [Домашнее задание №7](https://maliksabirov.github.io/element-school/homework/7/)
