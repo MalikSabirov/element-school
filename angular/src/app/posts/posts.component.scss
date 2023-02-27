@@ -1,0 +1,37 @@
+.posts {
+  & > *:not(:last-child) {
+    margin-bottom: 28px;
+  }
+}
+
+.post {
+  background-color: #fff;
+  padding: 12px 24px;
+  border-radius: 16px;
+  border: 1px solid #828282;
+}
+
+.post__title {
+  color: #204a6a;
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+}
+
+.post__body {
+  margin-bottom: 14px;
+}
+
+.post__comments {
+  padding-left: 12px;
+
+  & > *:not(:last-child) {
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+
+    border-bottom: 1px solid #828282;
+  }
+}
+
+summary {
+  margin-bottom: 16px;
+}

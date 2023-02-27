@@ -1,0 +1,19 @@
+<ul class="posts">
+  <li *ngFor="let post of posts" class="post">
+    <h3 class="post__title">{{ post.title }}</h3>
+    <p class="post__body">{{ post.body }}</p>
+
+    <details>
+      <summary>Comments</summary>
+
+      <ul class="post__comments">
+        <app-comment
+          *ngFor="let comment of post.children"
+          title="{{ comment.name }}"
+          body="{{ comment.body }}"
+          email="{{ comment.email }}"
+        ></app-comment>
+      </ul>
+    </details>
+  </li>
+</ul>
