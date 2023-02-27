@@ -1,0 +1,15 @@
+.wrapper {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.posts {
+  & > *:not(:last-child) {
+    margin-bottom: 28px;
+  }
+}
