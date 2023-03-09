@@ -1,0 +1,15 @@
+<header
+  class="font-poppins py-8 max-w-6xl px-5 mx-auto flex justify-between items-center"
+>
+  <app-logo class="flex items-center"></app-logo>
+
+  <div class="max-w-2xl w-full flex justify-between items-center">
+    <nav class="flex max-w-sm justify-between w-full space-x-3">
+      <a *ngFor="let navItem of navMenu" [href]="navItem.href">
+        {{ navItem.name }}
+      </a>
+    </nav>
+
+    <app-search></app-search>
+  </div>
+</header>
