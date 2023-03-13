@@ -1,0 +1,26 @@
+<section
+  class="py-32 font-playfair max-w-6xl px-5 mx-auto h-full flex justify-between items-start"
+>
+  <div class="mt-12 mr-14 max-w-[400px]">
+    <h2 class="text-5xl leading-tight mb-6">
+      Why do we help with legalization?
+    </h2>
+
+    <p class="text-gray font-poppins font-normal leading-relaxed text-xl">
+      We are here for UMKM in Indonesia to carry out the legalization process,
+      which is sometimes complicated.
+    </p>
+  </div>
+
+  <div
+    class="basis-1/2 shrink-0 grid grid-cols-2 gap-7 grid-rows-[251px_251px]"
+  >
+    <app-card
+      *ngFor="let card of cards"
+      [iconUrl]="card.iconUrl"
+      [title]="card.title"
+      [description]="card.description"
+      class="shadow-card"
+    ></app-card>
+  </div>
+</section>

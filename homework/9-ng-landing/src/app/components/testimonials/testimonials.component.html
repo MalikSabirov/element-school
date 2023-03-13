@@ -1,0 +1,42 @@
+<section class="pt-14 font-poppins max-w-6xl px-5 mx-auto">
+  <h2 class="font-playfair mb-12 text-center text-5xl leading-tight">
+    Clients Testimonial
+  </h2>
+
+  <swiper
+    [slidesPerView]="2"
+    [spaceBetween]="30"
+    [pagination]="{ type: 'bullets' }"
+    [keyboard]="{
+      enabled: true
+    }"
+    [virtual]="true"
+    class="my-swiper"
+  >
+    <ng-template swiperSlide *ngFor="let testimonial of testimonials">
+      <div class="">
+        <div
+          class="mb-7 p-8 bg-white text-center shadow-testimonial rounded-[10px]"
+        >
+          <h3 class="mb-2 font-medium text-lg">
+            {{ testimonial.title }}
+          </h3>
+          <p class="text-sm leading-6 text-strongGray">
+            {{ testimonial.content }}
+          </p>
+        </div>
+
+        <div class="flex w-fit mx-auto items-center">
+          <img
+            [src]="testimonial.author.image"
+            class="rounded-full mr-4 w-14 h-14"
+          />
+          <div>
+            <h4 class="font-inter">{{ testimonial.author.name }}</h4>
+            <p>{{ testimonial.author.position }}</p>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </swiper>
+</section>
