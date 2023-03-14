@@ -1,0 +1,11 @@
+<div>
+  <h4 class="mb-8 text-[#F4F5F7] text-xl">{{ title }}</h4>
+
+  <ul class="space-y-3">
+    <li *ngFor="let menuItem of menuList" class="flex flex-col items-start">
+      <a [href]="menuItem.href" class="text-[#EEEFF4] leading-normal">{{
+        menuItem.name
+      }}</a>
+    </li>
+  </ul>
+</div>

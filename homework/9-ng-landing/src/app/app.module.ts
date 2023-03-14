@@ -10,6 +10,10 @@ import { WhyUsComponent } from './components/why-us/why-us.component';
 import { CardComponent } from './components/card/card.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { SwiperModule } from 'swiper/angular';
+import { FooterComponent } from './components/footer/footer.component';
+import { CopyrightComponent } from './components/copyright/copyright.component';
+import { FooterSocialComponent } from './components/footer-social/footer-social.component';
+import { FooterMenuComponent } from './components/footer-menu/footer-menu.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,10 @@ import { SwiperModule } from 'swiper/angular';
     WhyUsComponent,
     CardComponent,
     TestimonialsComponent,
+    FooterComponent,
+    CopyrightComponent,
+    FooterSocialComponent,
+    FooterMenuComponent,
   ],
   imports: [BrowserModule, SwiperModule],
   providers: [],

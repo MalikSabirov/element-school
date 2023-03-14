@@ -1,0 +1,28 @@
+<footer class="bg-blue font-inter">
+  <div
+    class="max-w-6xl px-5 mx-auto flex justify-between items-start pt-[72px] pb-24"
+  >
+    <div class="flex items-center">
+      <img src="assets/icons/logo-white.svg" class="mr-2.5" alt="logo" />
+      <span class="font-poppins font-bold text-[22px] text-[#F9F8F9]">
+        Lawliet
+      </span>
+    </div>
+
+    <div class="flex space-x-7">
+      <app-footer-menu
+        *ngFor="let menu of footerMenu"
+        [title]="menu.title"
+        [menuList]="menu.menuList"
+        class="w-40"
+      ></app-footer-menu>
+    </div>
+  </div>
+
+  <div class="bg-[#004D7B]">
+    <div class="max-w-6xl px-5 mx-auto py-4 flex items-center justify-between">
+      <app-copyright></app-copyright>
+      <app-footer-social></app-footer-social>
+    </div>
+  </div>
+</footer>
