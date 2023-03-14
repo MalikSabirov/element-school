@@ -11,3 +11,4 @@
 5. [Домашнее задание №6](https://maliksabirov.github.io/element-school/homework/6/)
 6. [Домашнее задание №7](https://maliksabirov.github.io/element-school/homework/7/)
 7. [Домашнее задание №8](https://github.com/MalikSabirov/element-school/tree/main/angular)
+8. [Домашнее задание №9](https://github.com/MalikSabirov/element-school/tree/main/homework/9-ng-landing)
